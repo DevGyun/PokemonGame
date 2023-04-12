@@ -1,36 +1,25 @@
 public class Pokemon
 {
-    String name;
-    int code;
-    int level;
-    int hp;
-    int maxHp;
-    int damage;
+    String name, type;
+    int damage, hp, maxHp, level; 
 
-    Pokemon(int code, int level)
+    Pokemon(Dictionary dict)
     {
-        this.code = code;
-        this.level = level;
-        switch(code)
-        {
-            case 0:
-            this.name = "파이리";
-            this.maxHp = 10;
-            this.damage = 1;
-            break;
-
-            case 1:
-            this.name = "꼬북이";
-            this.maxHp = 10;
-            this.damage = 1;
-            break;
-        }
-        this.hp = this.maxHp;
+        
     }
-    
-    void levelUp()
+    enum PokemonStat
     {
-        this.level++;
-        System.out.printf("%s 의 레벨이 %d 레벨로 올랐습니다.\n", this.name, this.level);
+        이상해씨("이상해씨", "LEAF", 2, 10),
+        이상해풀("이상해풀", "LEAF", 2, 10)
+        final String name, type;
+        final int damage, hp, maxHp, level;
+        PokemonStat(String name, String type, int damage, int maxHp)
+        {
+            this.name = name;
+            this.type = type;
+            this.damage = damage;
+            this.maxHp = maxHp;
+            this.level = level;
+        }
     }
 }
