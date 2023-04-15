@@ -1,4 +1,4 @@
-public class GameStart extends Scene
+public class _GameStart extends Scene
 {
     public void update()
     {

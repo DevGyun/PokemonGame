@@ -11,15 +11,16 @@ public class SceneManager
         return sceneManager;
     }
 
-    Scene currentScene = new GameStart();
+    Scene currentScene = new _GameStart();
     public void changeScene(SceneNames sceneName)
     {
         switch(sceneName)
         {
             case GAME_START:
-                currentScene = new GameStart();
+                currentScene = new _GameStart();
                 break;
             case SELECT_FIRST_POKEMON:
+                currentScene = new _SelectFirstPokemon();
                 break;
             case BATTLE:
                 break;
